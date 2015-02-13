@@ -9,6 +9,12 @@ The script was originally developed for performance tests in a bachelor thesis.
 Edit "blog/conf.example.php" and rename it to blog/conf.php", then execute "install.php".
 
 
+## Screenshot ##
+
+![Simble Homepage](screenshot.png "Simble Homepage")
+Homepage with some example blog posts.
+
+
 ## Opportunities for Improvement ##
 
 Further considerations for extending the blog script:
