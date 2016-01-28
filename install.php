@@ -6,8 +6,7 @@ include 'blog/system/Database.php';
 try {
 	$db = new blog\system\Database($config['database']);
 } catch (PDOException $e) {
-	echo $e->getMessage();
-	die();
+	die($e->getMessage());
 }
 
 $posts = 'CREATE TABLE `posts` (
@@ -32,10 +31,10 @@ try {
 	$db->exec($posts);
 	$db->exec($comments);
 	
-	echo 'Tables successfully created.';
+	echo 'Tables successfully created. ';
 } catch (PDOException $e) {
 	echo $e->getMessage();
 }
 
-echo ' Redirecting to homepage...';
+echo 'Redirecting to homepage...';
 header('Refresh: 3; url=index.php');

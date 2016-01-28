@@ -23,10 +23,8 @@ abstract class AbstractController {
 		if (isset($this->config['database'])) {
 			try {
 				$this->db = new Database($this->config['database']);
-			} catch (PDOException $e) {
-				echo $e->getMessage();
-				echo $this->db->errorInfo();
-				die();
+			} catch (\PDOException $e) {
+				die($e->getMessage());
 			}
 		}
 			
